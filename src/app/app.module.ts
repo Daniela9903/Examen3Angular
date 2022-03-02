@@ -13,7 +13,8 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
     ListaComponent,
   ],
   imports: [
-    BrowserModule,HttpClientModule,
+    BrowserModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
   ],

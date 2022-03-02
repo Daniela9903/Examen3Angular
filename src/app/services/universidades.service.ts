@@ -16,10 +16,6 @@ export class UniversidadesService {
     return this.http.get( url );
   }
 
-  getLista(){
-    return this.http.get(this.URL);
-    
-  }
   
   
 }
