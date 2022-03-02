@@ -7,14 +7,43 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <ion-label>Ingresa pais que quieras conocer sus universidades</ion-label>
+  <form (ngSubmit)="buscar()" autocomplete="off">
+    
+ <ion-input placeholder="Buscar"type="text" [(ngModel)]="termino" name="termino" class="form-control"></ion-input>
+   
+  </form>
+
+    <h1>Lista de universidades</h1>
+
+    <div>
+      <table class="table">
+          <thead>
+            <tr>
+             
+              <th scope="col">Pais</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Pagina Web</th>
+              <th scope="col">Dominio</th>
+              
+            </tr>
+          </thead>
+          <tbody *ngFor="let mensaje of mensajes">
+  
+            <tr>
+             
+              <td>{{mensaje.country}}</td>
+              <td>{{mensaje.name}}</td>
+              <td>{{mensaje.web_pages}}</td>
+              <td>{{mensaje.domains}}</td>
+            
+            </tr>
+  
+          </tbody>
+        </table>
   </div>
+  
+ 
 </ion-content>
