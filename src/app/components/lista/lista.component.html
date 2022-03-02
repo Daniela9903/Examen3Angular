@@ -1,0 +1,35 @@
+
+<label>Buscar Pais</label>
+<form (ngSubmit)="buscar()" autocomplete="off">
+  <input type="text" [(ngModel)]="termino" name="termino" class="form-control" />
+</form>
+
+<div> <h1>Listado de universidades</h1></div>
+         
+<div>
+    <table class="table">
+        <thead>
+          <tr>
+            <!-- <th scope="col">Ciudad</th> -->
+            <th scope="col">Pais</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Pagina Web</th>
+            <th scope="col">Dominio</th>
+            
+          </tr>
+        </thead>
+        <tbody *ngFor="let mensaje of mensajes">
+
+          <tr>
+            <!-- <td>{{mensaje.state-province}}</td> -->
+            <td>{{mensaje.country}}</td>
+            <td>{{mensaje.name}}</td>
+            <td>{{mensaje.web_pages}}</td>
+            <td>{{mensaje.domains}}</td>
+          
+          </tr>
+
+        </tbody>
+      </table>
+</div>
+
