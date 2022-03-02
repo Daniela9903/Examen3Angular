@@ -14,13 +14,6 @@ export class HomePage {
 
   buscar() {
     console.log(this.termino);
-
-    // this.universidadesService.buscarPais(this.termino)
-    // .subscribe(resp =>{
-    //   console.log(resp);
-    // })
-
-
     
     this.universidadesService.buscarPais(this.termino)
     .subscribe((resp: any) =>{
